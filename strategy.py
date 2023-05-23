@@ -36,6 +36,7 @@ class Strategy(object):
 
     def state_machine_run(self,data):
         self.current = data[close_coloumn_name]
+        print(data[date_coloumn_name])
         current_hour = pd.to_datetime(data[date_coloumn_name],format='%Y-%m-%d %H:%M').hour
         current_minute = pd.to_datetime(data[date_coloumn_name],format='%Y-%m-%d %H:%M').minute
         # print(' current_hour = ',current_hour,'current_minute = ',current_minute)
