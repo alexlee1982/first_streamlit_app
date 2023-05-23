@@ -37,8 +37,7 @@ file_name_choose = 'A50_' + choose_date.strftime('%Y_%m_%d') + '_klt1.csv'
 
 
 if os.path.exists(file_name_choose):
-    df_old = pd.read_csv(file_name_choose)
-    print('df_old = ',df_old)
+    df_old = pd.read_csv(file_name_choose)    
     df_choose_year = df_old[pd.DatetimeIndex(df_old[date_coloumn_name]).year  == choose_date.year ]
     df_choose_month = df_choose_year[pd.DatetimeIndex(df_choose_year[date_coloumn_name]).month  == choose_date.month]
     df_choose_day = df_choose_month[pd.DatetimeIndex(df_choose_month[date_coloumn_name]).day  == choose_date.day]
