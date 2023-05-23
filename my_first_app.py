@@ -31,7 +31,7 @@ for f in os.listdir(cur_path):
         all_csv_files.append(f)
         all_dates.append(datetime.date(int(f.split("_")[1]),int(f.split("_")[2]),int(f.split("_")[3])))
 
-choose_date = st.date_input('选择需要绘制的日期',datetime.date(2022,7,1))
+choose_date = st.date_input('选择需要绘制的日期',datetime.date(2023,5,17))
 sorted_all_dates = sorted(all_dates,key=lambda x:datetime.datetime(x.year,x.month,x.day).timestamp())
 file_name_choose = 'A50_' + choose_date.strftime('%Y_%m_%d') + '_klt1.csv'
 
