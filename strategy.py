@@ -37,8 +37,8 @@ class Strategy(object):
     def state_machine_run(self,data):
         self.current = data[close_coloumn_name]
         print(data[date_coloumn_name])
-        current_hour = pd.to_datetime(data[date_coloumn_name],format='%Y-%m-%d %H:%M').hour
-        current_minute = pd.to_datetime(data[date_coloumn_name],format='%Y-%m-%d %H:%M').minute
+        current_hour = pd.to_datetime(data[date_coloumn_name],format='%Y-%m-%d %H:%M:%S').hour
+        current_minute = pd.to_datetime(data[date_coloumn_name],format='%Y-%m-%d %H:%M:%S').minute
         # print(' current_hour = ',current_hour,'current_minute = ',current_minute)
         if States.Init == self.current_state:
             # 读取当前数据时间
